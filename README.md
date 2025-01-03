@@ -47,16 +47,19 @@ and that the username and password list are correct.
 if u want to use ur own wordlist instead of rockyou.txt , u can modify in the script ,  
 
 Step 1: create ur own wordlist  
+
 Step 2: move it into the SSH Login Brute Force Directory ( deleting rockyou is not necessory )  
+
 Step 3: open the script in editor ( gedit Script.py)  
+
 Step 4: Find These Lines,  
-  ''' try:  
-  
-            with open("rockyou.txt", "r") as password_list:  
+
+    try: 
+           with open("rockyou.txt", "r") as password_list:  
                 for password in password_list:  
                     password = password.strip("\n")  
                     attempts += 1  
-                    print(f"[{attempts}] Attempting Password: '{password}'") '''  
+                    print(f"[{attempts}] Attempting Password: '{password}'")  
 
 Step 5: Here u can see rockyou.txt , change the name rockyou to ur own wordlist in quotes  
 example : with open("mylist.txt", "r") as password_list:  
